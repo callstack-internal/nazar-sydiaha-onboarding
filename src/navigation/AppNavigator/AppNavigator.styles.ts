@@ -5,4 +5,7 @@ export const styles = StyleSheet.create({
   navigatorHeader: {
     backgroundColor: colors.background.primary,
   },
+  headerTitle: {
+    fontWeight: 'bold',
+  },
 });

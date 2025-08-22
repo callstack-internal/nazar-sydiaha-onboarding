@@ -2,8 +2,8 @@ import React from 'react';
 import { View, FlatList, Alert } from 'react-native';
 import { styles } from './CityListScreen.styles';
 import { CityListScreenProps, CityWithWeather } from './CityListScreen.types';
-import { City, getWeatherForCity } from 'src/api/weather';
-import { Routes } from 'src/navigation/types';
+import { getWeatherForCity } from 'src/api/weather';
+import { Routes } from 'src/types/navigation/routes';
 import { useWeather } from 'src/hooks/useWeather';
 import { CityListItem } from './components/CityListItem';
 
@@ -12,7 +12,7 @@ export const CityListScreen: React.FC<CityListScreenProps> = ({
 }) => {
   const { cities } = useWeather();
 
-  const handleCityPress = async (city: City) => {
+  const handleCityPress = async (city: Weather.Place.City) => {
     try {
       const weatherData = await getWeatherForCity(city);
       navigation.navigate(Routes.WeatherDetails, { weatherData });

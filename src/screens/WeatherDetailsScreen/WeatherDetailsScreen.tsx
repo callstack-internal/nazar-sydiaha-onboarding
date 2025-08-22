@@ -7,13 +7,19 @@ import { Header } from './components/Header';
 import { WeatherDetailsScreenProps } from './WeatherDetailsScreen.types';
 import { Button } from 'src/components/Button/Button';
 
+type WeatherDetails = {
+  label: string;
+  value: string;
+  icon: string;
+}[];
+
 export const WeatherDetailsScreen: React.FC<WeatherDetailsScreenProps> = ({
   navigation,
   route,
 }) => {
   const { weatherData } = route.params;
 
-  const weatherDetails = [
+  const weatherDetails: WeatherDetails = [
     {
       label: 'Temperature',
       value: `${Math.round(weatherData.main.temp)}°C`,

@@ -1,6 +1,7 @@
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
-import { RootStackParamList, Routes } from 'src/navigation/types';
+import { RootStackParamList } from 'src/types/navigation/paramLists';
+import { Routes } from 'src/types/navigation/routes';
 
 export type WeatherDetailsScreenProps = {
   navigation: NativeStackNavigationProp<

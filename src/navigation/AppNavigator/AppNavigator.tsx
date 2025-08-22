@@ -4,7 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { CityListScreen } from 'src/screens/CityListScreen';
 import { WeatherDetailsScreen } from 'src/screens/WeatherDetailsScreen';
 import { styles } from './AppNavigator.styles';
-import { RootStackParamList, Routes } from '../types';
+import { Routes } from 'src/types/navigation/routes';
+import { RootStackParamList } from 'src/types/navigation/paramLists';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -16,9 +17,7 @@ const AppNavigator: React.FC = () => {
         screenOptions={{
           headerStyle: styles.navigatorHeader,
           headerTintColor: 'white',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
+          headerTitleStyle: styles.headerTitle,
         }}
       >
         <Stack.Screen

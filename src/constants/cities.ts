@@ -1,6 +1,4 @@
-import { City } from 'src/api/weather';
-
-export const citiesList: City[] = [
+export const citiesList: Weather.Place.City[] = [
   { id: 1, name: 'New York', lat: 40.7128, lon: -74.006 },
   { id: 2, name: 'London', lat: 51.5074, lon: -0.1278 },
   { id: 3, name: 'Tokyo', lat: 35.6762, lon: 139.6503 },
