@@ -14,7 +14,9 @@ import { City, getWeatherForCity } from 'src/api/weather';
 import { colors } from 'src/constants/colors';
 import { Routes } from 'src/navigation/types';
 
-const CityListScreen: React.FC<CityListScreenProps> = ({ navigation }) => {
+export const CityListScreen: React.FC<CityListScreenProps> = ({
+  navigation,
+}) => {
   const [cities, setCities] = useState<CityWithWeather[]>(
     citiesList.map(city => ({ ...city, loading: true })),
   );
@@ -88,5 +90,3 @@ const CityListScreen: React.FC<CityListScreenProps> = ({ navigation }) => {
     </View>
   );
 };
-
-export default CityListScreen;

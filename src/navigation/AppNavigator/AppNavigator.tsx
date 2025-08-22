@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import CityListScreen from 'src/screens/CityListScreen/CityListScreen';
+import { CityListScreen } from 'src/screens/CityListScreen';
 import { WeatherDetailsScreen } from 'src/screens/WeatherDetailsScreen';
 import { styles } from './AppNavigator.styles';
 import { RootStackParamList, Routes } from '../types';
